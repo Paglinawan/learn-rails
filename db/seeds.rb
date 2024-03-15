@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+for i in 1..5
+  Post.create(title: "Title #{i}", body: "body #{i}")
+end
