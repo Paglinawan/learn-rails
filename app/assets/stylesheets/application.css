@@ -13,8 +13,38 @@
  *= require_tree .
  *= require_self
  */
-
- h1 a {
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  padding: 40px;
+}
+h1 {
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+h1 a {
   font-size: 16px;
   font-weight: normal;
- }
+}
+.form-area {
+  display: grid;
+  grid-auto-flow: row;
+  place-items: start;
+  gap: 8px;
+  width: 300px;
+}
+.form-area dl {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 8px;
+  width: 100%;
+}
+.form-area input, .form-area textarea{
+  width: 100%;
+}
+.link-back{
+  display: block;
+  margin-top: 24px;
+}
