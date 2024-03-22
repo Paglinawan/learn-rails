@@ -14,8 +14,14 @@ class PostsController < ApplicationController
 
   def create
     # ↓ Active Record
-    Post.create(title: params[:post][:title], body: params[:post][:body])
+    Post.create(post_params)
 
     redirect_to root_path
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :body)
   end
 end
