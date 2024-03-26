@@ -6,11 +6,25 @@
 <dl>
   <dt><%= form.label :title %></dt>
   <dd><%= form.text_field :title %></dd>
+  <% if @post.errors.full_messages_for(:title).any? %>
+  <ul>
+    <% @post.errors.full_messages_for(:title).each do |message| %>
+    <li><%= message %>
+    <% end %>
+  </ul>
+  <% end %>
 </dl>
 
 <dl>
   <dt><%= form.label :body %></dt>
   <dd><%= form.text_area :body %></dd>
+  <% if @post.errors.full_messages_for(:body).any? %>
+  <ul>
+    <% @post.errors.full_messages_for(:body).each do |message| %>
+    <li><%= message %>
+    <% end %>
+  </ul>
+  <% end %>
 </dl>
 
 <%= form.submit %>
